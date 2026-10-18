@@ -35,6 +35,8 @@ foreach (var thread in threads)
 
 State._isRunning = false;
 
+File.AppendAllText(filePath, $"\n=== SUMMARY ===\nTotal Processed Orders: {Stats.ProcessedCount}\nTotal Price: {Stats.TotalPrice} AZN\n");
+
 Console.WriteLine("\n=== ALL ORDERS PROCESSED SUCCESSFULLY ===");
 Console.WriteLine($"Total processed orders: {Stats.ProcessedCount}");
 Console.WriteLine($"Total price:            {Stats.TotalPrice} AZN");
